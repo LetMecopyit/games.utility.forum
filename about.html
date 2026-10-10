@@ -3,12 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — games.utility.forum</title>
-  <meta name="description" content="Learn about the philosophy, technology stack, and architecture behind games.utility.forum.">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>About Game Forum & Online Games | games.utility.forum</title>
+  <meta name="title" content="About Game Forum & Online Games | games.utility.forum">
+  <meta name="description" content="Discover our indie game forum and free games online platform. Learn how we build lightweight browser games, multiplayer games online, and gaming tools.">
+  <meta name="keywords" content="game forum, free games online, multiplayer games online, online games, indie games, browser games, web gaming community">
+  <meta name="author" content="games.utility.forum">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://games.utility.forum/about.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://games.utility.forum/about.html">
+  <meta property="og:site_name" content="games.utility.forum">
+  <meta property="og:title" content="About Game Forum & Online Games | games.utility.forum">
+  <meta property="og:description" content="Discover our indie game forum and free games online platform. Learn how we build lightweight browser games, multiplayer games online, and gaming tools.">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://games.utility.forum/about.html">
+  <meta name="twitter:title" content="About Game Forum & Online Games | games.utility.forum">
+  <meta name="twitter:description" content="Discover our indie game forum and free games online platform. Learn how we build lightweight browser games, multiplayer games online, and gaming tools.">
+
+  <!-- Performance & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org Structured Data (AboutPage & BreadcrumbList) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://games.utility.forum/about.html#webpage",
+        "url": "https://games.utility.forum/about.html",
+        "name": "About Game Forum & Online Games | games.utility.forum",
+        "description": "Learn about the mission, technical architecture, and community game forum behind games.utility.forum.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://games.utility.forum/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://games.utility.forum/about.html#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://games.utility.forum/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Game Forum & Online Games",
+            "item": "https://games.utility.forum/about.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -23,7 +84,7 @@
         </div>
       </a>
 
-      <nav>
+      <nav aria-label="Main Navigation">
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="about.html" class="nav-link active">About</a></li>
@@ -33,91 +94,122 @@
       </nav>
 
       <div class="header-actions">
-        <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Day/Night Mode">
+        <!-- Day / Night Theme Switcher -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Day or Night Mode">
           <span id="themeStatusIcon">☀️</span>
           <span id="themeStatusText">Day</span>
         </button>
+
+        <!-- Synth Audio HUD -->
         <button id="audioToggleBtn" class="audio-hud-btn" title="Toggle Synth Music">
           <span class="audio-pulse"></span>
           <span id="audioStatusText">PLAY BGM</span>
         </button>
+
+        <!-- Mobile Menu Toggle -->
         <button class="btn-mobile-toggle" aria-label="Toggle navigation menu">☰</button>
       </div>
     </div>
   </header>
 
-  <main>
+  <!-- Semantic Breadcrumbs for On-Page SEO -->
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">About Game Forum</li>
+      </ol>
+    </nav>
+  </div>
+
+  <main id="mainContent">
     <div class="container">
       <header class="page-header">
-        <div class="hero-badge">PROJECT ARCHITECTURE & VISION</div>
-        <h1 class="page-title">About <span class="gradient-text">games.utility.forum</span></h1>
+        <div class="hero-badge">COMMUNITY GAME FORUM & WEB GAMING</div>
+        <h1 class="page-title">
+          About Our <span class="gradient-text">Free Games Online</span> & Game Forum
+        </h1>
         <p class="page-lead">
-          Building a clean, lightning-fast sanctuary for retro and arcade browser games powered by pure web standards.
+          Building a high-speed, distraction-free destination for instant browser arcade gaming, multiplayer competitions, and community discussions.
         </p>
       </header>
 
       <article class="content-box prose">
-        <h2>1. The Vision</h2>
+        <h2>1. Our Mission: Lightweight Free Games Online</h2>
         <p>
-          The modern web is filled with bloated game portals weighed down by intrusive video advertisements, multi-megabyte game engines, tracking scripts, and slow initial load times.
+          The modern web has become crowded with bloated gaming sites overloaded with unskippable ads, multi-megabyte engine downloads, tracking scripts, and slow loading times.
         </p>
         <p>
-          <strong>games.utility.forum</strong> was created with a minimalist, high-performance philosophy:
+          <strong>games.utility.forum</strong> was founded to offer a refreshing alternative for players seeking <strong>free games online</strong>:
         </p>
         <ul>
-          <li><strong>Instant Execution:</strong> Pure JavaScript games that load in milliseconds with zero dependencies or loading spinners.</li>
-          <li><strong>Built-in Soundtracks:</strong> Synthesized audio built on the Web Audio API, offering retro chiptune rhythms and tactile SFX without loading heavy MP3 assets.</li>
-          <li><strong>Effortless Persistence:</strong> Modern cloud data storage using Supabase to preserve player high scores, achievements, and game states across devices.</li>
-          <li><strong>Open & Modular:</strong> Fully Git-versioned and deployed through Vercel's global edge network.</li>
+          <li><strong>Instant Browser Play:</strong> Pure HTML5 and JavaScript games that boot in milliseconds with zero required downloads or plugins.</li>
+          <li><strong>Live Synthesized Music:</strong> Real-time 8-bit and synthwave chiptune audio generated through the browser Web Audio API.</li>
+          <li><strong>Zero Paywalls or Clutter:</strong> Clean, distraction-free entertainment with no pay-to-win mechanics or disruptive popups.</li>
+          <li><strong>Seamless Progress Preservation:</strong> Instant guest sessions that store your high scores and records without mandatory sign-up screens.</li>
         </ul>
 
-        <h2 id="architecture">2. Technology Stack</h2>
+        <h2>2. The Game Forum Community on utility.forum</h2>
         <p>
-          Every component of <code>games.utility.forum</code> has been chosen to maximize speed, maintainability, and user delight:
+          A vital pillar of our platform is the <strong>game forum</strong> hosted under the broader <strong>utility.forum</strong> network. We believe that great browser gaming thrives when players and builders collaborate directly.
         </p>
-        <div class="stats-strip" style="margin: 1.5rem 0 2rem;">
-          <div class="stat-item">
-            <div class="stat-value" style="color:var(--cyan-neon);">Core Web</div>
-            <div class="stat-label">HTML5, Modern CSS custom properties, and Vanilla ES6+ modules.</div>
+        <h3>What the Game Forum Offers</h3>
+        <ul>
+          <li><strong>High Score Verification & Leaderboards:</strong> Share screenshots, verify speed runs, and compete for community titles.</li>
+          <li><strong>Game Suggestions & Ideation:</strong> Propose original gameplay mechanics, retro arcade revivals, and puzzle concepts.</li>
+          <li><strong>Indie Developer Corner:</strong> Discuss Canvas rendering techniques, procedural audio synthesis, and game state architecture.</li>
+          <li><strong>Multiplayer Beta Testing:</strong> Be the first to test upcoming room-based multiplayer titles before global release.</li>
+        </ul>
+
+        <h2>3. Technology Powering Our Online Games</h2>
+        <p>
+          We rely on lean, standard-compliant web technologies designed for longevity, responsiveness, and speed:
+        </p>
+        <div class="seo-grid-2" style="margin: 1.5rem 0 2rem;">
+          <div class="seo-card">
+            <h4>Modern Semantic Web Standards</h4>
+            <p>
+              Handcrafted HTML5, modern CSS custom properties with Day/Night theming, and modular ES6 JavaScript. Zero bloated external runtime frameworks.
+            </p>
           </div>
-          <div class="stat-item">
-            <div class="stat-value" style="color:var(--magenta-neon);">Web Audio API</div>
-            <div class="stat-label">Procedural sound synthesis, oscillators, dynamic chord progressions, and filters.</div>
+          <div class="seo-card">
+            <h4>Interactive Web Audio Engine</h4>
+            <p>
+              Dynamic oscillators, lowpass filters, and chord arpeggiators create authentic chiptune soundtracks without streaming large media files.
+            </p>
           </div>
-          <div class="stat-item">
-            <div class="stat-value" style="color:var(--emerald-neon);">Supabase</div>
-            <div class="stat-label">PostgreSQL-powered high scores, guest/user authentication, and game save synchronization.</div>
+          <div class="seo-card">
+            <h4>Cloud High Scores & Local Storage</h4>
+            <p>
+              Dual-layer persistence that works completely offline via <code>localStorage</code> and syncs with cloud PostgreSQL tables for global rankings.
+            </p>
           </div>
-          <div class="stat-item">
-            <div class="stat-value" style="color:var(--amber-neon);">Vercel</div>
-            <div class="stat-label">Continuous deployment from Git with edge caching and SSL out of the box.</div>
+          <div class="seo-card">
+            <h4>Global Edge Delivery</h4>
+            <p>
+              Distributed across high-performance edge networks for low latency access worldwide with automatic HTTPS security.
+            </p>
           </div>
         </div>
 
-        <h2>3. Cloud Persistence & Guest Accounts</h2>
+        <h2 id="roadmap">4. Multiplayer Games Online Roadmap</h2>
         <p>
-          Players shouldn't have to navigate cumbersome sign-up barriers just to save their top score. We automatically provision an anonymous local identifier for guests. When connected to our Supabase database:
-        </p>
-        <ul>
-          <li>High scores are submitted to public leaderboards immediately after game completion.</li>
-          <li>In-game progression and preferences are saved locally with automatic cloud synchronization.</li>
-          <li>Players can optionally link a display handle to claim their leaderboard rank.</li>
-        </ul>
-
-        <h2>4. Community & Contribution Roadmap</h2>
-        <p>
-          We are continuously developing new mini-games and arcade experiences:
+          We are committed to delivering competitive and cooperative <strong>multiplayer games online</strong>:
         </p>
         <ol>
-          <li><strong>Neon Snake 2049</strong> (Live) — Responsive vector arcade snake.</li>
-          <li><strong>Cyber Pong Zero</strong> (In Development) — Fast-paced paddle action with dynamic AI.</li>
-          <li><strong>Void Asteroids</strong> (In Development) — 2D vector space physics shooter.</li>
-          <li><strong>Chiptune Jukebox</strong> (Planned) — Interactive music composer & custom visualizer.</li>
+          <li><strong>Neon Snake 2049</strong> (Live) - Fast responsive single-player retro arcade snake with Web Audio SFX.</li>
+          <li><strong>Cyber Pong Zero</strong> (In Development) - 2-player real-time online duel with variable physics.</li>
+          <li><strong>Void Asteroids</strong> (In Development) - Vector space shooter with co-op leaderboard points pooling.</li>
+          <li><strong>Community Room Challenges</strong> (Planned) - Private multiplayer lobby links you can paste directly into our game forum.</li>
         </ol>
 
+        <h2>5. How to Get Involved with the Game Forum</h2>
+        <p>
+          Whether you have an idea for an arcade mechanic or want to submit your own JavaScript game to the catalog, we invite you to participate:
+        </p>
         <div class="policy-callout">
-          <strong>Interested in submitting an indie game?</strong><br>
-          Our codebase is designed to make adding games as simple as dropping a directory into <code>/games</code>. Connect with us on the forum or contribute via our GitHub repository.
+          <strong>Join the Discussion:</strong><br>
+          Visit <strong>utility.forum</strong> to share your thoughts, report gameplay bugs, and participate in voting on the next game to be built.
         </div>
       </article>
     </div>
@@ -138,18 +230,19 @@
         <ul class="footer-nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Service</a></li>
         </ul>
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 games.utility.forum</div>
-        <div>Simple JavaScript games with retro synth audio</div>
+        <div>© 2026 games.utility.forum | Free games online, multiplayer games, and game forum community.</div>
+        <div>Crafted with Vanilla JS, Modern CSS, and Web Audio API</div>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="js/audio.js"></script>
   <script src="js/main.js"></script>
 </body>
