@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>games.utility.forum — Instant Browser Games with Synth Music & Cloud Saves</title>
-  <meta name="description" content="Play instant, fast-loading retro and arcade JavaScript games with synth soundtrack, cloud leaderboards powered by Supabase, and zero friction.">
+  <title>games.utility.forum — Simple Browser Games & Retro Music</title>
+  <meta name="description" content="A simple, distraction-free home for lightweight browser games with synth audio and instant play.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -26,7 +26,6 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="#games" class="nav-link">Games Catalog</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
           <li><a href="terms.html" class="nav-link">Terms</a></li>
@@ -34,215 +33,76 @@
       </nav>
 
       <div class="header-actions">
+        <!-- Day / Night Theme Switcher -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Day/Night Mode">
+          <span id="themeStatusIcon">☀️</span>
+          <span id="themeStatusText">Day</span>
+        </button>
+
+        <!-- Synth Audio HUD -->
         <button id="audioToggleBtn" class="audio-hud-btn" title="Toggle Synth Music">
           <span class="audio-pulse"></span>
           <span id="audioStatusText">PLAY BGM</span>
         </button>
+
+        <!-- Mobile Menu Toggle -->
         <button class="btn-mobile-toggle" aria-label="Toggle navigation menu">☰</button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
+    <!-- Simple Hero Section -->
     <section class="hero">
       <div class="container">
-        <div class="hero-badge">⚡ INSTANT ARCADE • ZERO INSTALL • CLOUD SAVES</div>
+        <div class="hero-badge">🕹️ GAMES.UTILITY.FORUM</div>
         <h1 class="hero-title">
-          Lightweight JS Games.<br>
-          <span class="gradient-text">Synth Soundtrack. Instant Play.</span>
+          Simple Browser Games.<br>
+          <span class="gradient-text">Retro Beats. Zero Clutter.</span>
         </h1>
         <p class="hero-desc">
-          Welcome to <strong>games.utility.forum</strong>. Play clean, pure JavaScript retro games with dynamic synth audio, compete on global leaderboards, and preserve your game progress via Supabase cloud storage.
+          A straightforward home for lightweight JavaScript games with chill synth sound effects and music. No sign-ups, no bloated downloads — just load and play.
         </p>
         <div class="hero-cta">
           <button class="btn btn-primary" data-play-game="games/neon-snake/index.html" data-game-title="Neon Snake 2049">
-            ▶ Play Neon Snake 2049
+            ▶ Play Neon Snake
           </button>
-          <a href="#games" class="btn btn-secondary">Explore All Games</a>
+          <a href="about.html" class="btn btn-secondary">Learn More</a>
         </div>
       </div>
     </section>
 
+    <!-- Clean Simple Features -->
     <div class="container">
-      <!-- Feature Strip -->
-      <section class="stats-strip">
-        <div class="stat-item">
-          <div class="stat-icon">⚡</div>
-          <div class="stat-value">&lt; 100ms</div>
-          <div class="stat-label">Ultra-fast load time via Vercel Edge CDN</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-icon">🎵</div>
-          <div class="stat-value">Web Audio</div>
-          <div class="stat-label">Built-in synthwave sound synthesis & SFX</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-icon">☁️</div>
-          <div class="stat-value">Supabase</div>
-          <div class="stat-label">Instant cloud leaderboards & session saves</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-icon">🕹️</div>
-          <div class="stat-value">Vanilla JS</div>
-          <div class="stat-label">Zero bloated runtimes or heavy downloads</div>
-        </div>
-      </section>
-
-      <!-- Games Showcase Section -->
-      <section id="games" style="padding-top: 2rem;">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">Arcade Showcase</h2>
-            <p class="section-subtitle">Pick a game to start playing directly in your browser.</p>
-          </div>
-          <div class="filter-tags">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="action">Action</button>
-            <button class="filter-btn" data-filter="retro">Retro</button>
-            <button class="filter-btn" data-filter="puzzle">Puzzle</button>
-          </div>
-        </div>
-
-        <div class="games-grid">
-          <!-- Game 1: Neon Snake (Playable) -->
-          <article class="game-card" data-category="retro">
-            <div class="game-thumbnail-wrapper">
-              <span class="game-badge featured">PLAYABLE NOW</span>
-              <div style="font-size: 4rem;">🐍</div>
-            </div>
-            <div class="game-content">
-              <div class="game-meta">
-                <span>RETRO / ARCADE</span>
-                <span>⭐ 4.9</span>
-              </div>
-              <h3 class="game-title">Neon Snake 2049</h3>
-              <p class="game-desc">
-                The timeless arcade classic reconstructed with neon vectors, responsive grid physics, synth SFX, and cloud leaderboard synchronization.
-              </p>
-              <div class="game-footer">
-                <div class="game-audio-indicator">
-                  <span>🔊 Web Audio SFX</span>
-                </div>
-                <button class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;" data-play-game="games/neon-snake/index.html" data-game-title="Neon Snake 2049">
-                  Play Now
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Game 2: Cyber Pong (Upcoming) -->
-          <article class="game-card" data-category="action">
-            <div class="game-thumbnail-wrapper">
-              <span class="game-badge">IN DEVELOPMENT</span>
-              <div style="font-size: 4rem;">🏓</div>
-            </div>
-            <div class="game-content">
-              <div class="game-meta">
-                <span>ACTION / 2-PLAYER</span>
-                <span>COMING SOON</span>
-              </div>
-              <h3 class="game-title">Cyber Pong Zero</h3>
-              <p class="game-desc">
-                High-velocity cybernetic paddle combat featuring curved deflection physics, particle sparks, and AI difficulty modes.
-              </p>
-              <div class="game-footer">
-                <div class="game-audio-indicator">
-                  <span>🔊 BGM Ready</span>
-                </div>
-                <button class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem; opacity: 0.6; cursor: not-allowed;">
-                  Soon
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Game 3: Void Asteroids (Upcoming) -->
-          <article class="game-card" data-category="action">
-            <div class="game-thumbnail-wrapper">
-              <span class="game-badge">IN DEVELOPMENT</span>
-              <div style="font-size: 4rem;">🚀</div>
-            </div>
-            <div class="game-content">
-              <div class="game-meta">
-                <span>SHOOTER / RETRO</span>
-                <span>COMING SOON</span>
-              </div>
-              <h3 class="game-title">Void Asteroids</h3>
-              <p class="game-desc">
-                Vector space flight combat. Blast space rock hazards, upgrade laser cannons, and survive relentless orbital waves.
-              </p>
-              <div class="game-footer">
-                <div class="game-audio-indicator">
-                  <span>🔊 Laser SFX</span>
-                </div>
-                <button class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem; opacity: 0.6; cursor: not-allowed;">
-                  Soon
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Game 4: Bit Matrix Memory (Upcoming) -->
-          <article class="game-card" data-category="puzzle">
-            <div class="game-thumbnail-wrapper">
-              <span class="game-badge">IN DEVELOPMENT</span>
-              <div style="font-size: 4rem;">🧩</div>
-            </div>
-            <div class="game-content">
-              <div class="game-meta">
-                <span>PUZZLE / MEMORY</span>
-                <span>COMING SOON</span>
-              </div>
-              <h3 class="game-title">Bit Matrix Memory</h3>
-              <p class="game-desc">
-                Harmonic pattern repetition puzzle testing reflex, short-term recall, and auditory sequence recognition.
-              </p>
-              <div class="game-footer">
-                <div class="game-audio-indicator">
-                  <span>🔊 Chords</span>
-                </div>
-                <button class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem; opacity: 0.6; cursor: not-allowed;">
-                  Soon
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Supabase Cloud Save & Leaderboard Section -->
-      <section class="cloud-sync-card">
-        <div class="cloud-sync-text">
-          <div style="color:var(--cyan-neon); font-size:0.85rem; font-family:var(--font-mono); font-weight:700; margin-bottom:0.4rem;">
-            CLOUD BACKEND ARCHITECTURE
-          </div>
-          <h3>Seamless Progress with Supabase</h3>
-          <p>
-            Never lose your high scores. <strong>games.utility.forum</strong> bridges modern browser games with a Supabase PostgreSQL backend for instant leaderboard updates, player profiles, and cloud saved game states.
+      <section class="simple-features">
+        <div class="feature-box">
+          <div class="feature-box-icon">🕹️</div>
+          <h2 class="feature-box-title">Instant Play</h2>
+          <p class="feature-box-desc">
+            Runs purely in your web browser. Fast, responsive, and playable on desktop or mobile without installs.
           </p>
-          <ul class="cloud-features">
-            <li>✓ Auto guest sessions</li>
-            <li>✓ Real-time top 10 rankings</li>
-            <li>✓ Cloud progress sync</li>
-            <li>✓ Offline fallback support</li>
-          </ul>
         </div>
-        <div class="cloud-sync-preview">
-          <div class="code-header">
-            <span>🏆 Top Pilots: Neon Snake</span>
-            <span style="font-size:0.75rem;">LIVE SYNC</span>
-          </div>
-          <div id="leaderboardList">
-            <!-- Rendered dynamically by js/main.js -->
-            <div style="color:var(--text-muted); padding:1rem 0; text-align:center;">Loading leaderboard...</div>
-          </div>
+
+        <div class="feature-box">
+          <div class="feature-box-icon">🎵</div>
+          <h2 class="feature-box-title">Synth Audio</h2>
+          <p class="feature-box-desc">
+            Equipped with procedural chiptune synth music and retro arcade sound effects that you can toggle on or off anytime.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-box-icon">💾</div>
+          <h2 class="feature-box-title">Saved Scores</h2>
+          <p class="feature-box-desc">
+            Automatically remembers your personal high scores and settings so your run records are always saved.
+          </p>
         </div>
       </section>
     </div>
   </main>
 
-  <!-- Interactive Game Modal -->
+  <!-- Interactive Game Modal (for quick play) -->
   <div id="gameModal" class="modal-overlay" role="dialog" aria-modal="true">
     <div class="modal-box">
       <div class="modal-header">
@@ -258,54 +118,31 @@
   <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="brand-logo">
-            <div class="brand-icon">🎮</div>
-            <span>games.utility.forum</span>
+      <div class="footer-simple">
+        <div class="brand-logo">
+          <div class="brand-icon">🎮</div>
+          <div>
+            <span>G.U.F.</span>
+            <span class="brand-subdomain">games.utility.forum</span>
           </div>
-          <p>
-            Fast, free, and open-source browser games built with pure JavaScript, retro synthesizers, and modern cloud state.
-          </p>
         </div>
 
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#games">Games Showcase</a></li>
-            <li><a href="about.html">About Portal</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Legal & Security</h4>
-          <ul class="footer-links">
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="about.html#architecture">Cloud Data & Supabase</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Platform</h4>
-          <ul class="footer-links">
-            <li><a href="https://vercel.com" target="_blank" rel="noopener">Hosted on Vercel</a></li>
-            <li><a href="https://supabase.com" target="_blank" rel="noopener">Database: Supabase</a></li>
-            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub Repository</a></li>
-          </ul>
-        </div>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 games.utility.forum — All rights reserved.</div>
-        <div>Crafted with Vanilla JS, CSS & Web Audio API</div>
+        <div>© 2026 games.utility.forum</div>
+        <div>Simple JavaScript games with retro synth audio</div>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/audio.js"></script>
   <script src="js/supabase-client.js"></script>
   <script src="js/main.js"></script>

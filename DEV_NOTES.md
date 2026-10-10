@@ -16,7 +16,7 @@ This document tracks all development sessions, architectural decisions, complete
 
 ---
 
-## 📝 Session 1: Initial Setup & Core Pages (Current)
+## 📝 Session 1: Initial Setup & Core Pages
 **Date:** 2026-10-10  
 **Focus:** Project initialization, design system, core portal pages, audio engine, sample game, and deployment configuration.
 
@@ -27,24 +27,49 @@ This document tracks all development sessions, architectural decisions, complete
    - Built a sleek, dark-mode cyber/arcade aesthetic using modern CSS variables, glassmorphic card layouts, responsive navigation, and neon glow effects.
    - Clean responsive layout optimized for desktop, tablet, and mobile browsers.
 3. **Core Portal Pages Created:**
-   - `index.html`: Homepage featuring hero section, games catalog with filters, ambient audio controls, leaderboard showcase, and CTA.
+   - `index.html`: Core homepage with audio controls, CTAs, and layout.
    - `about.html`: Information about `games.utility.forum`, indie game philosophy, open-source tech, roadmap, and contact.
    - `privacy.html`: Comprehensive Privacy Policy tailored for user game saves, Supabase integration, cookies/local storage, and analytics.
    - `terms.html`: Terms of Service covering gameplay, fair use, leaderboards, and user-generated content.
 4. **Built-in Synth Audio Engine (`js/audio.js`):**
-   - Created a Web Audio API procedural music and sound effects generator (no heavy MP3 downloads required, instant playback with mute/unmute toggle and volume control).
+   - Created a Web Audio API procedural music and sound effects generator.
 5. **Supabase Cloud Integration Layer (`js/supabase-client.js`):**
-   - Configured modular Supabase client helper for storing player high scores and game progress with automatic `localStorage` fallback if API keys are not yet configured.
+   - Configured modular Supabase client helper with localStorage fallback.
 6. **Starter Playable Game (`games/neon-snake/`):**
-   - Included a fully playable, polished canvas game ("Neon Snake 2049") featuring particle effects, synth sound effects, combo multipliers, and score saving.
+   - Included canvas game ("Neon Snake 2049") featuring particle effects and synth sound effects.
 7. **Deployment & Config (`vercel.json`, `README.md`, `.gitignore`):**
-   - Configured `vercel.json` for clean URLs, routing, caching headers, and Git ignore rules.
+   - Configured `vercel.json` for clean URLs and Git repository initialized.
+
+---
+
+## 📝 Session 2: Day/Night Mode & Simple Hero Homepage Refactor (Current)
+**Date:** 2026-10-10  
+**Focus:** Implemented Day/Night theme switcher, stripped homepage clutter and marketing claims, built a simple hero homepage.
+
+### Actions Taken:
+1. **Day & Night Mode Architecture (`css/style.css`):**
+   - **Night Mode (Default):** Retains deep space arcade palette with dark background, subtle grids, and glowing cyan/magenta accents.
+   - **Day Mode (`data-theme="light"`):** Clean, crisp white/slate background (`#f8fafc` / `#ffffff`) with high-contrast text (`#0f172a`), refined borders, and tailored vibrant accents.
+   - Added smooth CSS color transitions and custom scrollbars for both themes.
+2. **Theme Switcher Script (`js/main.js`):**
+   - Integrated `#themeToggleBtn` in navigation with persistent state in `localStorage` (`guf_theme`).
+   - Dynamic icon and text updates (`☀️ Day` ↔ `🌙 Night`).
+   - Added theme switch button across all pages (`index.html`, `about.html`, `privacy.html`, `terms.html`).
+3. **Homepage Simplification (`index.html`):**
+   - **Removed clutter & claims:** Stripped all buzzword claims (Vercel, Supabase, speed stats, cloud architecture cards) and the games grid catalog from the homepage.
+   - **Created Simple Hero:** Clean headline (*Simple Browser Games. Retro Beats. Zero Clutter.*), direct subtitle, primary CTA to play Neon Snake via clean modal overlay, and secondary link to About page.
+   - **Clean Highlights:** Replaced cluttered strips with 3 simple, honest feature boxes:
+     - 🕹️ Instant Play (Pure browser gameplay without installs)
+     - 🎵 Synth Audio (Procedural chiptune engine with mute toggle)
+     - 💾 Saved Scores (Automatic run persistence)
+   - Streamlined minimal footer across the portal.
+4. **Testing & Verification:**
+   - Validated layout, Day/Night mode toggling, typography contrast, and game modal functionality in browser.
 
 ---
 
 ## 🗺️ Next Steps & Roadmap
-- [ ] Connect live Supabase project credentials in `js/supabase-client.js` (URL & anon key).
-- [ ] Add more mini-games (e.g. Neon Breakout, Space Defender, Retro Pong, Cyber Sudoku).
-- [ ] Implement player profile modal / Supabase Auth (Sign in with Google / Email / Guest).
-- [ ] Add global real-time leaderboard sync using Supabase Realtime channels.
-- [ ] Push to GitHub and link to Vercel custom domain `games.utility.forum`.
+- [ ] Connect live Supabase project credentials in `js/supabase-client.js` when ready.
+- [ ] Add new mini-games (e.g. Neon Breakout, Cyber Pong).
+- [ ] Push updates to Git remote and link Vercel domain `games.utility.forum`.
+

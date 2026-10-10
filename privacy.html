@@ -26,7 +26,6 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="index.html#games" class="nav-link">Games Catalog</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="privacy.html" class="nav-link active">Privacy Policy</a></li>
           <li><a href="terms.html" class="nav-link">Terms</a></li>
@@ -34,6 +33,10 @@
       </nav>
 
       <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Day/Night Mode">
+          <span id="themeStatusIcon">☀️</span>
+          <span id="themeStatusText">Day</span>
+        </button>
         <button id="audioToggleBtn" class="audio-hud-btn" title="Toggle Synth Music">
           <span class="audio-pulse"></span>
           <span id="audioStatusText">PLAY BGM</span>
@@ -123,46 +126,26 @@
   <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="brand-logo">
-            <div class="brand-icon">🎮</div>
-            <span>games.utility.forum</span>
+      <div class="footer-simple">
+        <div class="brand-logo">
+          <div class="brand-icon">🎮</div>
+          <div>
+            <span>G.U.F.</span>
+            <span class="brand-subdomain">games.utility.forum</span>
           </div>
-          <p>Fast, free, and open-source browser games built with pure JavaScript, retro synthesizers, and modern cloud state.</p>
         </div>
 
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#games">Games Showcase</a></li>
-            <li><a href="about.html">About Portal</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Legal & Security</h4>
-          <ul class="footer-links">
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="about.html#architecture">Cloud Data & Supabase</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Platform</h4>
-          <ul class="footer-links">
-            <li><a href="https://vercel.com" target="_blank" rel="noopener">Hosted on Vercel</a></li>
-            <li><a href="https://supabase.com" target="_blank" rel="noopener">Database: Supabase</a></li>
-            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub Repository</a></li>
-          </ul>
-        </div>
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 games.utility.forum — All rights reserved.</div>
-        <div>Crafted with Vanilla JS, CSS & Web Audio API</div>
+        <div>© 2026 games.utility.forum</div>
+        <div>Simple JavaScript games with retro synth audio</div>
       </div>
     </div>
   </footer>

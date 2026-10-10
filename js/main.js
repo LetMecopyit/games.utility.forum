@@ -1,14 +1,47 @@
 /**
- * games.utility.forum - Portal Interaction & UI Scripts
+ * games.utility.forum - Portal Interaction & Theme Scripts
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
   initNavigation();
   initAudioControls();
-  initGameFilters();
   initGameModal();
-  loadLiveLeaderboard();
 });
+
+// Day & Night Mode Switcher
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('themeToggleBtn');
+  const themeText = document.getElementById('themeStatusText');
+  const themeIcon = document.getElementById('themeStatusIcon');
+
+  // Stored theme or default to dark (night mode)
+  const currentTheme = localStorage.getItem('guf_theme') || 'dark';
+  applyTheme(currentTheme);
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const active = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      const newTheme = active === 'light' ? 'dark' : 'light';
+      applyTheme(newTheme);
+      localStorage.setItem('guf_theme', newTheme);
+    });
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      if (themeText) themeText.textContent = 'Night';
+      if (themeIcon) themeIcon.textContent = '🌙';
+      if (toggleBtn) toggleBtn.title = 'Switch to Night Mode';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      if (themeText) themeText.textContent = 'Day';
+      if (themeIcon) themeIcon.textContent = '☀️';
+      if (toggleBtn) toggleBtn.title = 'Switch to Day Mode';
+    }
+  }
+}
 
 // Mobile Navigation Toggle
 function initNavigation() {
@@ -47,32 +80,6 @@ function initAudioControls() {
       window.gufAudio.toggleMusic();
     });
   }
-}
-
-// Filter Games By Tag
-function initGameFilters() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const gameCards = document.querySelectorAll('.game-card');
-
-  if (!filterBtns.length) return;
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.getAttribute('data-filter');
-
-      gameCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
 }
 
 // Modal Quick-Play System
@@ -117,25 +124,4 @@ function initGameModal() {
       closeModal();
     }
   });
-}
-
-// Load Leaderboard on Home Page
-async function loadLiveLeaderboard() {
-  const boardEl = document.getElementById('leaderboardList');
-  if (!boardEl || !window.gufStorage) return;
-
-  try {
-    const scores = await window.gufStorage.getLeaderboard('neon-snake', 5);
-    boardEl.innerHTML = scores.map((item, index) => `
-      <div style="display:flex; justify-content:space-between; align-items:center; padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <div style="display:flex; align-items:center; gap:0.75rem;">
-          <span style="font-family:var(--font-mono); color:${index === 0 ? 'var(--amber-neon)' : 'var(--cyan-neon)'}; font-weight:700;">#${index + 1}</span>
-          <span style="font-weight:600;">${item.player_name || 'Pilot'}</span>
-        </div>
-        <span style="font-family:var(--font-mono); color:var(--emerald-neon); font-weight:700;">${item.score.toLocaleString()} PTS</span>
-      </div>
-    `).join('');
-  } catch (e) {
-    console.error('Leaderboard render error:', e);
-  }
 }
