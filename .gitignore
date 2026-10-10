@@ -1,0 +1,14 @@
+# System and OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Vercel & Node
+.vercel
+node_modules/
+dist/

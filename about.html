@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — games.utility.forum</title>
+  <meta name="description" content="Learn about the philosophy, technology stack, and architecture behind games.utility.forum.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">🎮</div>
+        <div>
+          <span>G.U.F.</span>
+          <span class="brand-subdomain">games.utility.forum</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#games" class="nav-link">Games Catalog</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+          <li><a href="terms.html" class="nav-link">Terms</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="audioToggleBtn" class="audio-hud-btn" title="Toggle Synth Music">
+          <span class="audio-pulse"></span>
+          <span id="audioStatusText">PLAY BGM</span>
+        </button>
+        <button class="btn-mobile-toggle" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <header class="page-header">
+        <div class="hero-badge">PROJECT ARCHITECTURE & VISION</div>
+        <h1 class="page-title">About <span class="gradient-text">games.utility.forum</span></h1>
+        <p class="page-lead">
+          Building a clean, lightning-fast sanctuary for retro and arcade browser games powered by pure web standards.
+        </p>
+      </header>
+
+      <article class="content-box prose">
+        <h2>1. The Vision</h2>
+        <p>
+          The modern web is filled with bloated game portals weighed down by intrusive video advertisements, multi-megabyte game engines, tracking scripts, and slow initial load times.
+        </p>
+        <p>
+          <strong>games.utility.forum</strong> was created with a minimalist, high-performance philosophy:
+        </p>
+        <ul>
+          <li><strong>Instant Execution:</strong> Pure JavaScript games that load in milliseconds with zero dependencies or loading spinners.</li>
+          <li><strong>Built-in Soundtracks:</strong> Synthesized audio built on the Web Audio API, offering retro chiptune rhythms and tactile SFX without loading heavy MP3 assets.</li>
+          <li><strong>Effortless Persistence:</strong> Modern cloud data storage using Supabase to preserve player high scores, achievements, and game states across devices.</li>
+          <li><strong>Open & Modular:</strong> Fully Git-versioned and deployed through Vercel's global edge network.</li>
+        </ul>
+
+        <h2 id="architecture">2. Technology Stack</h2>
+        <p>
+          Every component of <code>games.utility.forum</code> has been chosen to maximize speed, maintainability, and user delight:
+        </p>
+        <div class="stats-strip" style="margin: 1.5rem 0 2rem;">
+          <div class="stat-item">
+            <div class="stat-value" style="color:var(--cyan-neon);">Core Web</div>
+            <div class="stat-label">HTML5, Modern CSS custom properties, and Vanilla ES6+ modules.</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" style="color:var(--magenta-neon);">Web Audio API</div>
+            <div class="stat-label">Procedural sound synthesis, oscillators, dynamic chord progressions, and filters.</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" style="color:var(--emerald-neon);">Supabase</div>
+            <div class="stat-label">PostgreSQL-powered high scores, guest/user authentication, and game save synchronization.</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" style="color:var(--amber-neon);">Vercel</div>
+            <div class="stat-label">Continuous deployment from Git with edge caching and SSL out of the box.</div>
+          </div>
+        </div>
+
+        <h2>3. Cloud Persistence & Guest Accounts</h2>
+        <p>
+          Players shouldn't have to navigate cumbersome sign-up barriers just to save their top score. We automatically provision an anonymous local identifier for guests. When connected to our Supabase database:
+        </p>
+        <ul>
+          <li>High scores are submitted to public leaderboards immediately after game completion.</li>
+          <li>In-game progression and preferences are saved locally with automatic cloud synchronization.</li>
+          <li>Players can optionally link a display handle to claim their leaderboard rank.</li>
+        </ul>
+
+        <h2>4. Community & Contribution Roadmap</h2>
+        <p>
+          We are continuously developing new mini-games and arcade experiences:
+        </p>
+        <ol>
+          <li><strong>Neon Snake 2049</strong> (Live) — Responsive vector arcade snake.</li>
+          <li><strong>Cyber Pong Zero</strong> (In Development) — Fast-paced paddle action with dynamic AI.</li>
+          <li><strong>Void Asteroids</strong> (In Development) — 2D vector space physics shooter.</li>
+          <li><strong>Chiptune Jukebox</strong> (Planned) — Interactive music composer & custom visualizer.</li>
+        </ol>
+
+        <div class="policy-callout">
+          <strong>Interested in submitting an indie game?</strong><br>
+          Our codebase is designed to make adding games as simple as dropping a directory into <code>/games</code>. Connect with us on the forum or contribute via our GitHub repository.
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon">🎮</div>
+            <span>games.utility.forum</span>
+          </div>
+          <p>Fast, free, and open-source browser games built with pure JavaScript, retro synthesizers, and modern cloud state.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#games">Games Showcase</a></li>
+            <li><a href="about.html">About Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Security</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="about.html#architecture">Cloud Data & Supabase</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul class="footer-links">
+            <li><a href="https://vercel.com" target="_blank" rel="noopener">Hosted on Vercel</a></li>
+            <li><a href="https://supabase.com" target="_blank" rel="noopener">Database: Supabase</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub Repository</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 games.utility.forum — All rights reserved.</div>
+        <div>Crafted with Vanilla JS, CSS & Web Audio API</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/audio.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — games.utility.forum</title>
+  <meta name="description" content="Privacy Policy for games.utility.forum explaining data collection, local storage, Supabase cloud saves, and player rights.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">🎮</div>
+        <div>
+          <span>G.U.F.</span>
+          <span class="brand-subdomain">games.utility.forum</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#games" class="nav-link">Games Catalog</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="privacy.html" class="nav-link active">Privacy Policy</a></li>
+          <li><a href="terms.html" class="nav-link">Terms</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="audioToggleBtn" class="audio-hud-btn" title="Toggle Synth Music">
+          <span class="audio-pulse"></span>
+          <span id="audioStatusText">PLAY BGM</span>
+        </button>
+        <button class="btn-mobile-toggle" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <header class="page-header">
+        <div class="hero-badge">DATA GOVERNANCE & PRIVACY</div>
+        <h1 class="page-title">Privacy Policy</h1>
+        <p class="page-lead">
+          Last updated: October 2026. How <strong>games.utility.forum</strong> respects and protects your gameplay data.
+        </p>
+      </header>
+
+      <article class="content-box prose">
+        <h2>1. Overview & Core Commitment</h2>
+        <p>
+          At <strong>games.utility.forum</strong> ("we", "our", or "the platform"), we believe in privacy-first web design. We do not sell user data, we do not utilize invasive advertising networks, and we collect only the minimal data necessary to deliver interactive games, synthesized audio, and persistent scoreboards.
+        </p>
+
+        <h2>2. Information We Process</h2>
+        <h3>A. Local Browser Storage (LocalStorage)</h3>
+        <p>
+          To maintain your gameplay state without mandatory registration, we utilize your web browser's <code>localStorage</code> API to store:
+        </p>
+        <ul>
+          <li><strong>Audio Preferences:</strong> Whether background synth music is muted or active (<code>guf_audio_muted</code>) and volume level.</li>
+          <li><strong>Anonymous Guest Identifier:</strong> A randomly generated string (e.g. <code>player_x9a2b</code>) enabling progress saving without personal identity.</li>
+          <li><strong>Local High Scores & Saves:</strong> Offline copies of high scores and level progression so games work seamlessly without network connectivity.</li>
+        </ul>
+
+        <h3>B. Supabase Cloud Database Storage</h3>
+        <p>
+          When connected to our backend infrastructure hosted on <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a>, the following game-related items are synchronized:
+        </p>
+        <ul>
+          <li><strong>Leaderboard Entries:</strong> Your chosen public handle or guest pseudonym, the game title (e.g. <code>neon-snake</code>), your earned score, and a submission timestamp.</li>
+          <li><strong>Game Progression Saves:</strong> Non-sensitive game configuration states, such as unlocked game levels or selected themes.</li>
+        </ul>
+
+        <h3>C. Hosting & Edge Network Logs (Vercel)</h3>
+        <p>
+          Our application is hosted on <a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a>. Standard HTTP server access logs (such as IP addresses, browser user-agent strings, and request timestamps) are processed transiently by Vercel for security, rate-limiting, and network optimization.
+        </p>
+
+        <h2>3. Third-Party Integrations</h2>
+        <p>
+          Our platform relies on the following infrastructure providers:
+        </p>
+        <ul>
+          <li><strong>Vercel Inc.:</strong> Static file hosting, DNS routing, and edge caching.</li>
+          <li><strong>Supabase Inc.:</strong> Cloud database for leaderboard data and save records.</li>
+          <li><strong>Google Fonts:</strong> Web font typography delivery.</li>
+        </ul>
+
+        <h2>4. Data Retention & Deletion Rights</h2>
+        <p>
+          Because we do not mandate personal accounts or capture email addresses for basic gameplay:
+        </p>
+        <ul>
+          <li><strong>Clearing Local Data:</strong> You may at any time delete all locally stored game scores and preferences by clearing your browser's site data/cookies for <code>games.utility.forum</code>.</li>
+          <li><strong>Leaderboard Removal:</strong> If you wish to remove a score submitted under a specific handle from our Supabase tables, contact the site administrator with your submission details for immediate removal.</li>
+        </ul>
+
+        <div class="policy-callout">
+          <strong>No Commercial Tracking:</strong> We do not deploy third-party advertising tracking pixels, cross-site analytics cookies, or behavioral advertising brokers.
+        </div>
+
+        <h2>5. Children's Privacy</h2>
+        <p>
+          Our games are designed for general public entertainment. We do not knowingly collect personally identifiable information from children under the age of 13.
+        </p>
+
+        <h2>6. Policy Updates & Contact</h2>
+        <p>
+          Any revisions to this Privacy Policy will be posted directly to this page with an updated timestamp. For questions or privacy inquiries, contact the team via our community portal at <strong>utility.forum</strong>.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon">🎮</div>
+            <span>games.utility.forum</span>
+          </div>
+          <p>Fast, free, and open-source browser games built with pure JavaScript, retro synthesizers, and modern cloud state.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#games">Games Showcase</a></li>
+            <li><a href="about.html">About Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Security</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="about.html#architecture">Cloud Data & Supabase</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul class="footer-links">
+            <li><a href="https://vercel.com" target="_blank" rel="noopener">Hosted on Vercel</a></li>
+            <li><a href="https://supabase.com" target="_blank" rel="noopener">Database: Supabase</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub Repository</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 games.utility.forum — All rights reserved.</div>
+        <div>Crafted with Vanilla JS, CSS & Web Audio API</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/audio.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
